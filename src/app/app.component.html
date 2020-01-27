@@ -2,7 +2,8 @@
   <div class="header">
     <h1>Selfcare Service</h1>
   </div>
-  <div class="loader" *ngIf="!customerOffers"></div>
+  <div class="loader" *ngIf="!customerOffers && !error"></div>
+  <h1 *ngIf="error"> {{ error }} </h1>
   <div *ngIf="customerOffers">
     <h2>Offers</h2>
     <table>
