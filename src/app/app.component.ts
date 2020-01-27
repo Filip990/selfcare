@@ -9,10 +9,15 @@ import { CustomerService } from './customer.service';
 export class AppComponent implements OnInit {
 
   constructor( private service: CustomerService ) {}
+  public customerOffers;
+  public customerSubs;
 
   ngOnInit() {
     this.service.getCustomerInfo().subscribe(
-      res => console.log(res)
+      (res) => {
+        this.customerOffers = res[0];
+        this.customerSubs = res[1];
+      }
     )
   }
 }

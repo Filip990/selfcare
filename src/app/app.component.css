@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    background-color: #3498db;
+    color: #f3f3f3;
+    text-align: left;
+    font-style: italic;
+}
+
+h1 {
+    margin: 1%;
+}
+
+table {
+    width:80%;
+    margin: auto;
+}
+
+table, td {
+    border: 1px solid #b2b0ce;
+    border-collapse: collapse;
+    background-color: #beebec;
+  }
+  
+th, td  {
+    padding: 1% 0;
+}
+
+th {
+    background-color: #3498db;
+    color: #f3f3f3;
+}

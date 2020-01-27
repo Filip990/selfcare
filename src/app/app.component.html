@@ -1,1 +1,38 @@
-<p>App works</p>
+<div class="container">
+  <div class="header">
+    <h1>Selfcare Service</h1>
+  </div>
+  <div *ngIf="customerOffers">
+    <h2>Offers</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Contract Start Date</th>
+        <th> Contract End Date</th>
+      </tr>
+      <tr *ngFor="let offer of customerOffers.offers" >
+        <td>{{ offer.id }}</td>
+        <td>{{ offer.name }}</td>
+        <td>{{ offer.contractStartDate | date }}</td>
+        <td>{{ offer.contractEndDate | date }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div *ngIf="customerSubs">
+    <h2>Subscriptions</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+      </tr>
+      <tr *ngFor="let sub of customerSubs.subscriptions" >
+        <td>{{ sub.id }}</td>
+        <td>{{ sub.name }}</td>
+        <td>{{ sub.type }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
